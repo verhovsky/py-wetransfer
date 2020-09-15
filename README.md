@@ -22,3 +22,13 @@ python
 requests
 
     pip install requests
+
+
+September 2020 notes
+====================
+
+I have updated this script to work with the latest WeTransfer links (as of mid-September 2020).  Many thanks to Alejandro Alonso and Marcos Besteiro López for starting this off.
+
+It's not my first Python script, but I don't really know Python very well, so be gentle with me...
+
+I have tested it on Windows 10 with Python 2.x and 3.x, and also on Linux (Raspberry Pi) with Python 2.x
