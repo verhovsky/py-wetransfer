@@ -6,11 +6,11 @@ Python script for downloading wetransfer files (https://www.wetransfer.com/) in 
 Usage
 =====
 
-You should have a we transfer address similar to https://www.wetransfer.com/downloads/XXXXXXXXXX/YYYYYYYYY/ZZZZZZZZ
+You should have a we transfer address similar to https://www.wetransfer.com/downloads/XXXXXXXXXX/YYYYYYYYY/ZZZZZZZZ or https://we.tl/XXXXXXXXXXXX
 
 So execute:
 
-    python wetransfer.py -u https://www.wetransfer.com/downloads/XXXXXXXXXXXXXXXXXXXXXXXXX/YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY/ZZZZZ
+    python wetransfer.py https://we.tl/XXXXXXXXXXXX
 
 And download it! :)
 
@@ -22,6 +22,9 @@ python
 requests
 
     pip install requests
+    
+HTMLParser (Python 3.x only?)
+    pip install HTMLParser
 
 
 September 2020 notes
