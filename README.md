@@ -1,37 +1,42 @@
 py-wetransfer
 =============
 
-Python script for downloading wetransfer files (https://www.wetransfer.com/) in command line mode
+Python 3 script for downloading [WeTransfer](https://www.wetransfer.com/) files from the command line
 
 Usage
 =====
 
-You should have a we transfer address similar to https://www.wetransfer.com/downloads/XXXXXXXXXX/YYYYYYYYY/ZZZZZZZZ or https://we.tl/XXXXXXXXXXXX
+You should have a WeTransfer address
 
-So execute:
+https://www.wetransfer.com/downloads/XXXXXXXXXX/YYYYYYYYY/ZZZZZZZZ 
 
-    python wetransfer.py https://we.tl/XXXXXXXXXXXX
+or a short-form one
 
-And download it! :)
+https://we.tl/XXXXXXXXXXXX
+
+Execute:
+
+    python3 wetransfer.py https://we.tl/XXXXXXXXXXXX
+
+and the file will be downloaded.
 
 Requirements
 =============
 
-python
+Python 3.8+
 
-requests
+[Requests](https://docs.python-requests.org/en/latest/)
 
-    pip install requests
+[BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
+
+[pyjson5](https://github.com/dpranke/pyjson5)
+
+    pip install requests beautifulsoup4 json5
     
-HTMLParser (Python 3.x only?)
-    pip install HTMLParser
 
-
-September 2020 notes
+September 2021 notes
 ====================
 
-I have updated this script to work with the latest WeTransfer links (as of mid-September 2020).  Many thanks to Alejandro Alonso and Marcos Besteiro López for starting this off.
+I have updated this script to work with the latest WeTransfer links (as of September 2021).  Many thanks to Alejandro Alonso, Marcos Besteiro López and Gary Watson for starting this off.
 
-It's not my first Python script, but I don't really know Python very well, so be gentle with me...
-
-I have tested it on Windows 10 with Python 2.x and 3.x, and also on Linux (Raspberry Pi) with Python 2.x
+I have tested it on macOS with Python 3.9
