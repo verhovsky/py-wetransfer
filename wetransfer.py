@@ -45,8 +45,12 @@ request_data = requests.get(url)
 soup = BeautifulSoup(request_data.text, "html.parser")
 for script_tag in soup.select('script[type="text/javascript"]'):
     if "__launch_darkly" in script_tag.string and "feature_flags" in script_tag.string:
-        js_src = script_tag.string.strip().rstrip(";")
-        obj_src = js_src[js_src.find("{") :]
+        js_src = script_tag.string.strip()
+        var_start = js_src.find("__launch_darkly")
+        var_src_junk = js_src[var_start:]
+        var_end = var_src_junk.find(";")
+        var_src = var_src_junk[:var_end]
+        obj_src = var_src[var_src.find("{"):].strip().strip(";")
         obj = json5.loads(obj_src)
         domain_user_id = obj["user"]["key"]
         break
